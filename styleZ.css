@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: white;
+}
+.header_logo {
+  background-color: #9e3723;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  max-width: 60%;
+  height: auto;
+}
+
+/* Side Menu Button Styling */
+.side-menu-button {
+  color: white;
+  position: fixed;
+  top: 4vh; /* Adjusted for better visibility on various devices */
+  right: 5%; /* Use percentage for better responsiveness */
+  font-size: 6vw; /* Adjusts size based on viewport width */
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Side Menu Styling */
+.side-menu {
+  height: 100%;
+  width: 0; /* Initially hidden */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  background-color: #9e3723;
+  overflow-x: hidden;
+  transition: width 0.5s ease-in-out;
+  display: flex; /* Makes .side-menu a flex container */
+  flex-direction: column; /* Stacks child elements vertically */
+  justify-content: center; /* Centers child elements vertically */
+  align-items: center; /* Centers child elements horizontally */
+  padding-top: 0; /* Adjust or remove as needed */
+}
+
+.side-menu a {
+  padding: 8px 8px 8px 4vw; /* Adjusted for responsiveness */
+  text-decoration: none;
+  font-size: 5vw; /* Adjusted for responsiveness */
+  color: white;
+  display: block;
+  transition: 0.3s;
+  margin-bottom: 80px;
+  font-size: 80px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+}
+
+.slider {
+  max-width: 600px; /* Adjust based on desired width */
+  margin: 20px auto 10px; /* Centers the slider */
+  position: relative;
+}
+
+.slides {
+  width: 100%;
+  height: auto;
+  visibility: hidden; /* Use visibility instead of display */
+  opacity: 0; /* Start with zero opacity */
+  transition: visibility 0s, opacity 1s ease-in-out; /* Add transition for visibility */
+  position: absolute; /* Position slides absolutely within the relative container */
+}
+
+.showSlide {
+  visibility: visible; /* Make the slide visible */
+  opacity: 1; /* Fully visible */
+  transition: visibility 0s 0s, opacity 1s ease-in-out; /* Adjust transition timing */
+}
+
+.menu-button {
+  display: block;
+  margin: 750px auto 40px; /* Adjusted top margin and bottom margin for spacing */
+  padding: 25px 120px;
+  background-color: #9e3723;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 45px;
+}
+
+.slogan-image {
+  display: block;
+  margin: 160px auto; /* Adjust top margin to control spacing from the menu button above */
+  width: 600px; /* Adjust width as needed */
+  height: auto; /* Keeps the aspect ratio */
+}
+
+.footer {
+  text-align: center; /* Centers the inline or inline-block elements */
+  width: 100%; /* Ensures the footer spans the full width of its container */
+  margin-top: auto; /* Optional: Pushes the footer to the bottom if the page content is not tall enough */
+  padding: 20px 0; /* Adds some padding above and below your SVGs */
+}
+
+svg {
+  vertical-align: middle; /* Aligns SVGs vertically if they have different heights */
+}
+.content {
+  flex-grow: 1; /* Allows this container to grow and take up available space */
+}
+html,
+body {
+  height: 100%; /* Necessary for flexbox layout */
+  display: flex;
+  flex-direction: column; /* Stacks content vertically */
+}
+
+body > * {
+  flex-shrink: 0; /* Prevents children of body from shrinking */
+}
+
+body {
+  flex-grow: 1; /* Allows the body to grow to fill available space, pushing the footer down */
+  margin: 0; /* Resets any default margin */
+}
+.footer-logo {
+  vertical-align: middle; /* Aligns the logo vertically in the middle of the text */
+  width: 50px; /* Adjusts the width of the logo */
+  margin-left: 5px; /* Adds some space between the text and the logo */
+}
+.powered-by {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 40px; /* Adjusts the font size of the text */
+}
+.powered-by a {
+  text-decoration: none;
+  color: black;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+.header h1 {
+  font-family: "bellmt";
+  margin: 0;
+  font-size: 75px; /* Adjust size as needed */
+  color: #9e3723; /* Adjust color as needed */
+}
+
+.back-button {
+  position: absolute;
+  left: 20px; /* Adjust as needed */
+  font-size: 90px; /* Adjust size as needed */
+  color: #9e3723; /* Adjust color as needed */
+  text-decoration: none;
+}
+.about-us-description {
+  font-family: Arial, Helvetica, sans-serif; /* Example font, replace with your choice */
+  font-size: 12px; /* Example size, adjust as needed */
+  color: #333333; /* Dark grey color, adjust as needed */
+  text-align: center; /* Center the text under the header */
+  margin-top: 10px; /* Add space between the header and the text */
+}
+
+.about-us-logo {
+  display: block;
+  margin: 40px auto; /* Adjusts the top and bottom margin, auto centers horizontally */
+  width: 150px; /* Adjust width as needed */
+  height: auto; /* Maintains aspect ratio */
+}
+.menu-button a {
+  text-decoration: none;
+  color: white;
+  font-family: "bellmt";
+}
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+  .side-menu-button {
+    font-size: 8vw;
+  }
+
+  .side-menu a {
+    font-size: 6vw;
+  }
+
+  .logo {
+    max-width: 70%; /* Adjust logo size on smaller screens */
+  }
+}
