@@ -25,13 +25,13 @@ html, body {
   background-color: white;
   color: #FFFFFF; /* White text color */
   border: 4px solid;
-  border-radius: 15px;
+  border-radius: 25px;
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
   display: block; /* Ensures the link fills the button area */
   text-align: center; /* Centers text horizontally */
-  font-size: 30px;
+  font-size: 60px;
   font-family: "bellmt";
 }
 
@@ -51,7 +51,7 @@ html, body {
 }
 
 .landing-logo {
-  width: 50%; /* Adjust the size of the image */
+  width: 300px; /* Adjust the size of the image */
   height: auto; /* Maintains aspect ratio */
 }
 
