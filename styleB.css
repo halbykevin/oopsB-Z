@@ -73,17 +73,20 @@ body {
 }
 
 .slider {
-  max-width: 600px; /* Adjust based on desired width */
-  margin: 20px auto 10px; /* Centers the slider */
-  position: relative;
+  width: 700px; /* Fixed width of the slider frame */
+  height: 700px; /* Fixed height of the slider frame */
+  margin: 20px auto; /* Centers the slider horizontally */
+  position: relative; /* Necessary for absolute positioning of slides */
+  overflow: hidden; /* Ensures no part of the slides overflow the container */
 }
 
 .slides {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Ensures slides fill the container width */
+  height: 100%; /* Ensures slides fill the container height */
+  object-fit: cover; /* Ensures the image covers the frame without distorting the aspect ratio */
   visibility: hidden; /* Use visibility instead of display */
   opacity: 0; /* Start with zero opacity */
-  transition: visibility 0s, opacity 1s ease-in-out; /* Add transition for visibility */
+  transition: visibility 0s, opacity 1s ease-in-out; /* Smooth transition for visibility and opacity */
   position: absolute; /* Position slides absolutely within the relative container */
 }
 
@@ -95,7 +98,7 @@ body {
 
 .menu-button {
   display: block;
-  margin: 750px auto 40px; /* Adjusted top margin and bottom margin for spacing */
+  margin: 100px auto 40px; /* Adjusted top margin and bottom margin for spacing */
   padding: 25px 120px;
   background-color: #4682B4;
   color: white;
