@@ -46,6 +46,12 @@ body {
   color: #4682b4; /* Text color for Batroun */
 }
 
+#ehden-btn {
+  padding: 80px 160px;
+  border-color: #9e3723; /* Specific border color for Batroun */
+  color: #9e3723; /* Text color for Batroun */
+}
+
 .image-container {
   margin-top: 50px;
   text-align: center;
